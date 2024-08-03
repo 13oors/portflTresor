@@ -16,6 +16,18 @@
   <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
   <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
   <link rel="stylesheet" href="css/style-switcher.css">
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ZqStZGxPQfs_pIDop",
+      });
+   })();
+</script>
+<script src="13oors/portflTresor/js/email.js"></script>
 </head>
 <body>
   <!-- ===== Main Container Start ===== -->
@@ -413,32 +425,32 @@ L'ÉCOLE INTERNATIONALE DE FRANÇAIS À L'UNIVERSITÉ DU QUÉBEC À TROIS-RIVIÈ
               <div class="row">
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Nom">
+                    <input type="text" class="form-control" placeholder="Nom" id="name">
                   </div>
                 </div>
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email">
+                    <input type="email" class="form-control" placeholder="Email" id="email">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Sujet">
+                    <input type="text" class="form-control" placeholder="Sujet" id="Subject">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <textarea name="" class="form-control" id=""  placeholder="Message"></textarea>
+                    <textarea name="" class="form-control" id=""  placeholder="Message" id="message" ></textarea>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
-                  <button type="submit" class="btn">Ecrivez un Message</button>
+                  <button type="submit" onclick="sendMail()" class="btn">Ecrivez un Message</button>
                 </div>
               </div>
             </div>
